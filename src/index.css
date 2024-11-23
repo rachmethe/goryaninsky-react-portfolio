@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 100;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-Thin.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 200;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-ExtraLight.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 300;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-Light.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 400;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-Regular.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-Medium.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-SemiBold.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-Bold.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 800;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-ExtraBold.ttf) format('opentype');
+    }
+
+    @font-face {
+        font-family: Montserrat;
+        font-weight: 900;
+        font-style: normal;
+        src: url(/fonts/montserrat/Montserrat-Black.ttf) format('opentype');
+    }
+
+    html {
+        font-family: Montserrat, system-ui, sans-serif;
+        height: 100%;
+        margin: 0;
+        background-color: #f9fafb;
+    }
+
+    /* Для фона страницы */
+    .bg-gray-50 {
+        background-color: #f9fafb;
+    }
+    
+    /* Основной цвет текста */
+    .text-gray-800 {
+        color: #1f2937;
+    }
+    
+    /* Текст ссылок */
+    .text-teal-600 {
+        color: #38b2ac;
+    }
+    
+    /* Наведение на ссылки */
+    .hover\:text-teal-800:hover {
+        color: #2c7a7b;
+    }
+    
+    /* Фон карточек/контейнеров */
+    .bg-white {
+        background-color: #ffffff;
+    }
+    
+    .bg-opacity-80 {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Контакты */
+    .text-teal-600 {
+        color: #38b2ac;
+    }
+  
+
+}

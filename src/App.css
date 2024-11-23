@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rounded-xl {
+    border-radius: 1rem;
+}
+
+.text-product {
+    color: #cbd5e1; /* slate-300 */
+}
+
+.hover-text-product:hover {
+    color: #f1f5f9; /* slate-100 */
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-order {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 12px 24px;
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: #cbd5e1;
+}
+
+.btn-order:hover {
+    color: #f1f5f9;
+}
+
+.background-blur {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    filter: blur(10px);
+}
