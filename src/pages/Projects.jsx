@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { DotLoader } from 'react-spinners';
+import { FaGithub } from 'react-icons/fa'; // Импортируем иконку GitHub
+import { FiExternalLink } from 'react-icons/fi'; // Импортируем иконку внешней ссылки
 import Header from '../components/layouts/Header';
 import Contacts from '../components/layouts/Contacts';
 import bgVideo1 from '../assets/bg-video1.mp4';
@@ -96,17 +98,17 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
+                      className="flex items-center gap-2 px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
                     >
-                      GitHub
+                      <FaGithub size={20} /> GitHub
                     </a>
                     <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
+                      className="flex items-center gap-2 px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
                     >
-                      LIVE
+                      <FiExternalLink size={20} /> LIVE
                     </a>
                   </div>
                 </motion.div>
