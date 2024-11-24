@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../components/layouts/Header';
-import Contacts from '../components/layouts/Contacts';
+import Contacts from '../components/layouts/Contacts'; // Импортируем Contacts
 import bgVideo1 from '../assets/bg-video1.mp4';
 
 const Projects = () => {
@@ -40,6 +40,15 @@ const Projects = () => {
       opacity: 1,
       y: 0,
       transition: { delay: i * 0.2, duration: 0.6 },
+    }),
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, y: -30 }, // Начинают выше
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.3 + 0.5, duration: 0.5, ease: 'easeOut' },
     }),
   };
 
@@ -108,7 +117,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
                     custom={index + 2}
-                    variants={textVariants}
+                    variants={buttonVariants}
                   >
                     GitHub
                   </motion.a>
@@ -118,7 +127,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
                     custom={index + 2.5}
-                    variants={textVariants}
+                    variants={buttonVariants}
                   >
                     LIVE
                   </motion.a>
