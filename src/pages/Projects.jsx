@@ -1,7 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Header from '../components/layouts/Header';
-
-// Импортируем видеофайлы
+import Contacts from '../components/layouts/Contacts';
 import bgVideo1 from '../assets/bg-video1.mp4';
 
 const Projects = () => {
@@ -16,7 +16,8 @@ const Projects = () => {
     },
     {
       title: 'Интернет-радио',
-      description: 'Мультижанровое интернет-радио с уникальным музыкальным дизайном, весёлыми джинглами, необычайными шоу и переключением 3D-сцен, за каждой из которой закреплен свой музыкальный жанр. Статус: в разработке',
+      description:
+        'Мультижанровое интернет-радио с переключением 3D-сцен, за каждой из которой закреплен свой музыкальный жанр. Статус: в разработке',
       technologies: 'Icecast2, Liquidsoap, React, TailwindCSS, Spline.design',
       github: 'https://github.com/username/project-two',
       live: 'https://project-two.example.com',
@@ -24,17 +25,40 @@ const Projects = () => {
     },
   ];
 
+  const cardVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: i * 0.3, duration: 0.8 },
+    }),
+  };
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6 },
+    }),
+  };
+
   return (
     <>
       <Header />
       <div className="text-center pt-5 sm:pt-32">
         <h1 className="text-4xl font-bold mb-8 text-slate-800">ПРОЕКТЫ</h1>
-        <div className="flex flex-col gap-8 px-6 md:px-12 pb-16">
+        <motion.div
+          className="flex flex-col gap-8 px-6 md:px-12 pb-16"
+          initial="hidden"
+          animate="visible"
+        >
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative group overflow-hidden rounded-lg shadow-lg"
-              style={{ height: '300px' }}
+              className="relative group overflow-hidden rounded-lg shadow-lg h-[600px] sm:h-[320px]"
+              custom={index}
+              variants={cardVariants}
             >
               {/* Видео фон */}
               <video
@@ -46,40 +70,66 @@ const Projects = () => {
               />
 
               {/* Контент карточки */}
-              <div className="relative z-10 flex flex-col justify-between h-full p-6 bg-gradient-to-b from-transparent to-black text-white">
+              <motion.div
+                className="relative z-10 flex flex-col justify-between h-full p-6 bg-gradient-to-b from-transparent to-black text-white"
+                custom={index}
+                variants={textVariants}
+              >
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
-                  <p className="mb-4">{project.description}</p>
-                  {/* Технологии с выделением ярким цветом */}
-                  <p className="text-sm font-semibold text-gradient mb-4">
+                  <motion.h2
+                    className="text-2xl font-bold mb-4"
+                    custom={index + 0.5}
+                    variants={textVariants}
+                  >
+                    {project.title}
+                  </motion.h2>
+                  <motion.p
+                    className="mb-4"
+                    custom={index + 1}
+                    variants={textVariants}
+                  >
+                    {project.description}
+                  </motion.p>
+                  <motion.p
+                    className="text-sm font-semibold text-gradient mb-4"
+                    custom={index + 1.5}
+                    variants={textVariants}
+                  >
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">
                       {project.technologies}
                     </span>
-                  </p>
+                  </motion.p>
                 </div>
                 {/* Кнопки */}
                 <div className="flex gap-4">
-                  <a
+                  <motion.a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
+                    className="flex items-center gap-2 px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
+                    custom={index + 2}
+                    variants={textVariants}
                   >
                     GitHub
-                  </a>
-                  <a
+                  </motion.a>
+                  <motion.a
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 text-white border-2 border-white rounded-none hover:bg-white hover:text-black transition-all"
+                    custom={index + 2.5}
+                    variants={textVariants}
                   >
-                    Live Project
-                  </a>
+                    LIVE
+                  </motion.a>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
+
+        {/* Подключение компонента Contacts */}
+        <Contacts />
       </div>
     </>
   );
