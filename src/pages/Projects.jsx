@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { DotLoader } from 'react-spinners';
-import { FaGithub } from 'react-icons/fa'; // Импортируем иконку GitHub
-import { FiExternalLink } from 'react-icons/fi'; // Импортируем иконку внешней ссылки
+import { FaGithub } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
 import Header from '../components/layouts/Header';
 import Contacts from '../components/layouts/Contacts';
-import bgVideo1 from '../assets/bg-video1.mp4'; // Первое видео
-import bgVideo2 from '../assets/bg-video2.mp4'; // Второе видео
+import bgVideo1 from '../assets/bg-video1.mp4';
+import bgVideo2 from '../assets/bg-video2.mp4';
 
 const Projects = () => {
   const projects = [
     {
       title: 'Магазин изделий из кожи',
-      description: 'This is the first project showcasing a unique concept.',
-      technologies: 'React, Vite, TailwindCSS, Spline.design',
+      description: 'Вебмагазин экслюзивных изделий из кожи ручной работы. На сайт интегрирована Spline-анимация для фона главной страницы. Моушн-дизайн реализован с помощью Tailwind и Framer Motion',
+      technologies: 'React, Vite, TailwindCSS, Spline.design, FramerMotion',
       github: 'https://github.com/rachmethe/massacre-mascarade',
       live: 'https://rachmethe.github.io/massacre-mascarade/',
     },
     {
       title: 'Интернет-радио',
       description:
-        'Мультижанровое интернет-радио с переключением 3D-сцен, за каждой из которых закреплен свой музыкальный жанр. Статус: в разработке',
+        'Мультижанровое интернет-радио с переключением 3D-сцен, за каждой из которых закреплен свой музыкальный жанр. Пока доступен только поток, который круглосуточно вещает на виртуальном сервере, доступном по адресу: http://mascarata.space:8000/stream',
       technologies: 'Icecast2, Liquidsoap, React, TailwindCSS, Spline.design',
-      github: 'https://github.com/username/project-two',
+      github: 'https://github.com/rachmethe/radio-mascarata',
       live: 'https://project-two.example.com',
     },
   ];

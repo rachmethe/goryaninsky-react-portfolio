@@ -86,7 +86,7 @@ const About = () => {
         </section>
 
         {/* Блок с погодой */}
-        <div className="flex justify-end mt-16 mr-28">
+        <div className="flex justify-end mt-16 mr-20 sm:mr-28">
           <section className="flex flex-col md:flex-row items-center gap-4 text-slate-700 border-2 border-slate-700 p-4 w-fit">
             {/* Текущая дата */}
             <div className="flex items-center border p-4 border-slate-700 w-[200px]">
