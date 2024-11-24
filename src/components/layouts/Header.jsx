@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-10 bg-white bg-opacity-95 sm:bg-opacity-30 text-slate-700 py-6 px-8 md:px-32 drop-shadow-md"
+      className="relative sm:fixed top-0 left-0 right-0 z-10 bg-white bg-opacity-0 sm:bg-opacity-30 text-slate-700 py-6 px-8 md:px-32 drop-shadow-md"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -54,7 +54,7 @@ const Header = () => {
           >
             <Link
               to="/"
-              className="p-3 hover:text-teal-600 transition-all cursor-pointer rounded-md font-black"
+              className="p-3 hover:text-blue-600 transition-all cursor-pointer rounded-md font-black"
             >
               /root
             </Link>
@@ -65,7 +65,7 @@ const Header = () => {
           >
             <Link
               to="/projects"
-              className="p-3 hover:text-teal-600 transition-all cursor-pointer rounded-md font-black"
+              className="p-3 hover:text-blue-600 transition-all cursor-pointer rounded-md font-black"
             >
               ./projects
             </Link>
@@ -76,7 +76,7 @@ const Header = () => {
           >
             <Link
               to="/about"
-              className="p-3 hover:text-teal-600 transition-all cursor-pointer rounded-md font-black"
+              className="p-3 hover:text-blue-600 transition-all cursor-pointer rounded-md font-black"
             >
               ./about
             </Link>

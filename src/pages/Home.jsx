@@ -21,7 +21,7 @@ const Home = () => {
       
       <Header />
       {/* Основная секция с текстом */}
-      <section className="flex items-center justify-start px-8 max-sm:pt-64 sm:pt-24 md:pt-36 lg:pt-24 xl:pt-24 2xl:pt-30 md:px-16 lg:px-32 pt-[120px]">
+      <section className="flex items-center justify-start px-8 max-sm:pt-14 sm:pt-24 md:pt-36 lg:pt-24 xl:pt-24 2xl:pt-30 md:px-16 lg:px-32 pt-[120px]">
         <motion.div
           className="max-w-[75%] sm:max-w-3xl md:max-w-4xl lg:max-w-5xl sm:mt-20 md:mt-0"
           initial="hidden"
@@ -84,7 +84,7 @@ const Home = () => {
             <FaGithub /> github
           </motion.a>
           <motion.a
-            href="https://t.me/your-profile"
+            href="https://t.me/rachmethe"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-lg sm:text-xl text-gray-600 hover:text-blue-600 w-full sm:w-auto gap-2"
