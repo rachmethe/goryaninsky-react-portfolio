@@ -47,8 +47,11 @@ const Projects = () => {
   return (
     <>
       <Header />
-      <div className="text-center pt-5 sm:pt-32">
-        <h1 className="text-4xl font-bold mb-8 text-slate-800">ПРОЕКТЫ</h1>
+      <div className="pt-5 sm:pt-32">
+        {/* Заголовок слева с меньшим шрифтом */}
+        <h1 className="text-2xl font-bold mb-8 text-slate-800 text-left pt-6 pl-20">
+          Проекты:
+        </h1>
 
         {/* Прелоадер */}
         {!isVideoLoaded && (
