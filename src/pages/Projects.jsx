@@ -5,7 +5,8 @@ import { FaGithub } from 'react-icons/fa'; // Импортируем иконк�
 import { FiExternalLink } from 'react-icons/fi'; // Импортируем иконку внешней ссылки
 import Header from '../components/layouts/Header';
 import Contacts from '../components/layouts/Contacts';
-import bgVideo1 from '../assets/bg-video1.mp4';
+import bgVideo1 from '../assets/bg-video1.mp4'; // Первое видео
+import bgVideo2 from '../assets/bg-video2.mp4'; // Второе видео
 
 const Projects = () => {
   const projects = [
@@ -19,7 +20,7 @@ const Projects = () => {
     {
       title: 'Интернет-радио',
       description:
-        'Мультижанровое интернет-радио с переключением 3D-сцен, за каждой из которой закреплен свой музыкальный жанр. Статус: в разработке',
+        'Мультижанровое интернет-радио с переключением 3D-сцен, за каждой из которых закреплен свой музыкальный жанр. Статус: в разработке',
       technologies: 'Icecast2, Liquidsoap, React, TailwindCSS, Spline.design',
       github: 'https://github.com/username/project-two',
       live: 'https://project-two.example.com',
@@ -28,6 +29,7 @@ const Projects = () => {
 
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
+  // Обработчик загрузки видео
   const handleVideoLoad = () => {
     console.log('Видео успешно загружено');
     setIsVideoLoaded(true);
@@ -71,7 +73,7 @@ const Projects = () => {
               >
                 {/* Видео фон */}
                 <video
-                  src={bgVideo1}
+                  src={index === 0 ? bgVideo1 : bgVideo2} // Второе видео для второй карточки
                   autoPlay
                   loop
                   muted
