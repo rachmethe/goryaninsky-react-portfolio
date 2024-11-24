@@ -119,10 +119,10 @@ const Projects = () => {
           </motion.div>
         )}
 
-        {/* Видео для загрузки */}
+        {/* Видео для загрузки, теперь отслеживаем загрузку bgVideo2 */}
         <video
-          src={bgVideo1}
-          onCanPlayThrough={handleVideoLoad} // Отслеживаем загрузку видео
+          src={bgVideo2} // Отслеживаем загрузку второго видео
+          onCanPlayThrough={handleVideoLoad} // Отслеживаем загрузку
           style={{ display: 'none' }} // Скрываем это видео
         />
 
