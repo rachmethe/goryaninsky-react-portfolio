@@ -4,6 +4,7 @@ import GradientBackground from '../components/layouts/GradientBackground';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaGithub, FaTelegram, FaInstagram, FaLinkedin, FaRegIdBadge } from 'react-icons/fa';
+import Contacts from '../components/layouts/Contacts';
 
 const Home = () => {
   const textVariants = {
@@ -35,9 +36,7 @@ const Home = () => {
             transition={{ duration: 1.2, delay: 0.1 }}
           >
             Привет! Меня зовут Максим, я{' '}
-            <span className="text-blue-600">фронтенд-разработчик</span> с
-            бэкграундом в проектном менеджменте, дефектоскопии в строительстве
-            АЭС и при обслуживании газотурбинных установок.
+            <span className="text-blue-600">фронтенд-разработчик</span> с опытом в проектном менеджменте и дефектоскопии в строительстве АЭС.
           </motion.p>
           <motion.p
             className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600"
@@ -62,7 +61,7 @@ const Home = () => {
       </section>
 
       {/* Секция с контактами */}
-      <motion.section
+      {/* <motion.section
         className="w-full px-8 md:px-16 lg:px-32 mt-12 flex items-center justify-end"
         initial="hidden"
         animate="visible"
@@ -124,7 +123,8 @@ const Home = () => {
             <FaLinkedin /> linkedin
           </motion.a>
         </motion.div>
-      </motion.section>
+      </motion.section> */}
+      <Contacts />
       <GradientBackground />
     </>
   );

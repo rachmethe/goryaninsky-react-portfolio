@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FiHome } from 'react-icons/fi'; // Импорт иконки
 import avatar from '../../assets/avatar.jpg';
 
 const Header = () => {
@@ -54,9 +55,9 @@ const Header = () => {
           >
             <Link
               to="/"
-              className="p-3 hover:text-blue-600 transition-all cursor-pointer rounded-md font-black"
+              className="p-3 hover:text-blue-600 transition-all cursor-pointer rounded-md font-black flex items-center"
             >
-              /root
+              <FiHome className="text-2xl" /> {/* Иконка */}
             </Link>
           </motion.li>
           <motion.li
@@ -67,7 +68,7 @@ const Header = () => {
               to="/projects"
               className="p-3 hover:text-blue-600 transition-all cursor-pointer rounded-md font-black"
             >
-              ./projects
+              проекты
             </Link>
           </motion.li>
           <motion.li
@@ -78,7 +79,7 @@ const Header = () => {
               to="/about"
               className="p-3 hover:text-blue-600 transition-all cursor-pointer rounded-md font-black"
             >
-              ./about
+              обо мне
             </Link>
           </motion.li>
         </motion.ul>
