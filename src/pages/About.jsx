@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FiCalendar, FiSun, FiRefreshCw } from 'react-icons/fi';
 import Header from '../components/layouts/Header';
 import Contacts from '../components/layouts/Contacts';
+import Skills from '../components/Skills';
 import gifAvatar from '../assets/gif-avatar.gif';
 
 const About = () => {
@@ -159,12 +160,14 @@ const About = () => {
               className="mb-4"
               variants={sectionVariants}
             >
-              <strong>Taurus Technologies</strong> (апрель 2019 — сентябрь 2019)
+              <strong>Taurus Technologies;</strong> Руководитель IT-проектов (апрель 2019 — сентябрь 2019)
               <br />
-              Руководитель IT-проектов: управление веб-разработкой, прототипирование, тестирование, контент-менеджмент, анализ потребностей потенциальных заказчиков.
+              Управление веб-разработкой, прототипирование, тестирование, контент-менеджмент, анализ потребностей потенциальных заказчиков.
             </motion.li>
           </ul>
         </motion.section>
+
+        <Skills />
 
         <motion.section
           className="flex justify-end mt-16 mr-20 sm:mr-28"
