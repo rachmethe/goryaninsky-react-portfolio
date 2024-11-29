@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import Header from '../components/layouts/Header';
@@ -8,18 +9,19 @@ import bgVideo1 from '../assets/bg-video1.mp4';
 import bgVideo2 from '../assets/bg-video2.mp4';
 
 const Projects = () => {
+  const { t } = useTranslation();
+
   const projects = [
     {
-      title: 'Магазин изделий из кожи',
-      description: 'Вебмагазин экслюзивных изделий из кожи ручной работы. На сайт интегрирована Spline-анимация для фона главной страницы. Моушн-дизайн реализован с помощью Tailwind и Framer Motion',
+      title: t('project1Title'),
+      description: t('project1Description'),
       technologies: 'React, Vite, TailwindCSS, Spline.design, FramerMotion',
       github: 'https://github.com/rachmethe/massacre-mascarade',
       live: 'https://rachmethe.github.io/massacre-mascarade/',
     },
     {
-      title: 'Интернет-радио',
-      description:
-        'Мультижанровое интернет-радио с переключением 3D-сцен, за каждой из которых закреплен свой музыкальный жанр. Пока доступен только поток, который круглосуточно вещает на виртуальном сервере, доступном по адресу: http://mascarata.space:8000/stream',
+      title: t('project2Title'),
+      description:t('project2Description'),
       technologies: 'Icecast2, Liquidsoap, React, TailwindCSS, Spline.design',
       github: 'https://github.com/rachmethe/radio-mascarata',
       live: 'https://project-two.example.com',
@@ -41,7 +43,7 @@ const Projects = () => {
       <div className="pt-5 sm:pt-32">
         {/* Заголовок слева с меньшим шрифтом */}
         <h1 className="text-2xl font-bold mb-8 text-slate-800 text-left pt-6 pl-20">
-          Проекты:
+          { t('projectsPageTitle') }
         </h1>
 
         {/* Карточки проектов */}
@@ -68,7 +70,7 @@ const Projects = () => {
 
               {/* Контент карточки */}
               <motion.div
-                className="relative z-10 flex flex-col justify-between h-full p-6 bg-gradient-to-b from-transparent to-black text-white"
+                className="relative z-10 flex flex-col justify-between h-full p-6  text-white"
                 custom={index}
                 variants={cardVariants}
               >

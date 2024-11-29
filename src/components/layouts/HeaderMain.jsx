@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="relative sm:fixed top-0 left-0 right-0 z-10 bg-white bg-opacity-80 text-slate-700 py-6 px-8 md:px-32 drop-shadow-md"
+      className="relative sm:fixed top-0 left-0 right-0 z-10 bg-white bg-opacity-0 sm:bg-opacity-10 text-slate-700 py-6 px-8 md:px-32 drop-shadow-md"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

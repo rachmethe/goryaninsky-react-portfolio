@@ -5,8 +5,10 @@ import Header from '../components/layouts/Header';
 import Contacts from '../components/layouts/Contacts';
 import Skills from '../components/Skills';
 import gifAvatar from '../assets/gif-avatar.gif';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const [currentDate, setCurrentDate] = useState('');
   const [weather, setWeather] = useState(null);
   const [lastUpdated, setLastUpdated] = useState('2024-11-24');
@@ -30,7 +32,6 @@ const About = () => {
     fetchWeather();
   }, []);
 
-  // Анимация появления секций
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeInOut' } },
@@ -46,7 +47,7 @@ const About = () => {
           animate="visible"
           variants={sectionVariants}
         >
-          <h2 className="text-2xl text-left font-bold mb-4">Обо мне:</h2>
+          <h2 className="text-2xl text-left font-bold mb-4">{t('aboutMe.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-justify">
             <motion.div
               className="space-y-4"
@@ -60,23 +61,11 @@ const About = () => {
                   alt="Gif Avatar"
                   className="rounded-lg max-sm:w-10 sm:w-14 md:w-20 h-auto mr-4"
                 />
-                Я начинающий фронтенд-разработчик с опытом работы в проектном менеджменте.
-                Мои профессиональные интересы включают создание удобных и эстетичных веб-приложений.
+                {t('aboutMe.paragraph1')}
               </p>
-              <p>
-                Увлекаюсь генеративным дизайном и керамической 3D-печатью. Люблю общаться с людьми
-                и принимать участие в интересных проектах.
-              </p>
-              <p>
-                Недавно помогал друзьям в организации выставки, посвящённой виртуальной и
-                дополненной реальности. Мероприятие включало инсталляции генеративного искусства
-                и фильм, полностью созданный с помощью технологий ИИ. Оно было приурочено к
-                открытию библиотеки.
-              </p>
-              <p>
-                Вдохновляюсь новыми технологиями, их доступностью и значимостью для общества,
-                а также личностным развитием.
-              </p>
+              <p>{t('aboutMe.paragraph2')}</p>
+              <p>{t('aboutMe.paragraph3')}</p>
+              <p>{t('aboutMe.paragraph4')}</p>
             </motion.div>
             <motion.div
               className="space-y-4"
@@ -84,16 +73,8 @@ const About = () => {
               animate="visible"
               variants={sectionVariants}
             >
-              <p>
-                Я всегда открыт для новых вызовов и возможностей. Моя цель — стать профессионалом
-                в веб-разработке и создавать продукты, которые будут приносить пользу и радовать
-                пользователей.
-              </p>
-              <p>
-                Благодаря организаторским навыкам и опыту в IT-проектах, я могу не только работать
-                с кодом, но и управлять процессами разработки. Это помогает мне эффективно
-                взаимодействовать с командой и достигать поставленных целей.
-              </p>
+              <p>{t('aboutMe.paragraph5')}</p>
+              <p>{t('aboutMe.paragraph6')}</p>
             </motion.div>
           </div>
         </motion.section>
@@ -104,16 +85,10 @@ const About = () => {
           animate="visible"
           variants={sectionVariants}
         >
-          <h2 className="text-2xl text-left font-bold mb-4">Образование:</h2>
-          <p className="mb-6">
-            I курс. Уфимский государственный авиационно-технический университет (2014-2015),
-            институт экономики, специализация — Финансы и кредит.
-          </p>
-          <p className="mb-6">
-            II-IV курсы. Московский университет им. С.Ю. Витте (2015-2018), факультет управления,
-            специализация — Управление проектами.
-          </p>
-          <p className="mb-6">hexlet.io</p>
+          <h2 className="text-2xl text-left font-bold mb-4">{t('education.title')}</h2>
+          <p className="mb-6">{t('education.paragraph1')}</p>
+          <p className="mb-6">{t('education.paragraph2')}</p>
+          <p className="mb-6">{t('education.paragraph3')}</p>
         </motion.section>
 
         <motion.section
@@ -122,48 +97,15 @@ const About = () => {
           animate="visible"
           variants={sectionVariants}
         >
-          <h2 className="text-2xl text-left font-bold mb-4">Опыт работы:</h2>
+          <h2 className="text-2xl text-left font-bold mb-4">{t('experience.title')}</h2>
           <ul className="list-disc ml-10 text-left mx-auto w-fit">
-            <motion.li
-              className="mb-4"
-              variants={sectionVariants}
-            >
-              <strong>ООО ЭНПРОС;</strong> Инженер неразрушающего контроля (март 2024 — настоящее время)
-              <br />
-              Проведение неразрушающего контроля в процессе инспекций и капитальных ремонтов газо-турбинных установок электростанций.
-            </motion.li>
-            <motion.li
-              className="mb-4"
-              variants={sectionVariants}
-            >
-              <strong>Госкорпорация Росатом;</strong> Дефектоскопист ультразвукового контроля (Народная Республика Бангладеш) (ноябрь 2022 — декабрь 2023)
-              <br />
-              Контроль сварных соединений металлоконструкций, составление заключений о результатах контроля, проведение комиссий по приемке готовых объектов контроля заказчиками из АтомСтройЭкспорт и Bangladesh Atomic Energy Commission.
-            </motion.li>
-            <motion.li
-              className="mb-4"
-              variants={sectionVariants}
-            >
-              <strong>Appen Butler Hill;</strong> Оценщик (rater) (май 2021 — март 2022)
-              <br />
-              Оценка релевантности рекламных объявлений (лендингов, креативов) по отношению к поисковым запросам, выявление неприемлемого контента, проверка англоязычных новостных статей на содержание дезинформации/конспирологии касающейся коронавируса. Сопоставление смыслового содержания веб-страниц попарно.
-            </motion.li>
-            <motion.li
-              className="mb-4"
-              variants={sectionVariants}
-            >
-              <strong>Московский аэропорт Домодедово;</strong> Архитектор продуктов (март 2020 — март 2021)
-              <br />
-              Разработка и актуализация продуктов и услуг: описание работы информационных и телекоммуникационных систем, ресурсов, задействованных при функционировании этих систем. Расчёт тарифов на продукты и услуги. Подготовка дел корпоративного арбитража с последующим выходом на заседания корпоративного суда.
-            </motion.li>
-            <motion.li
-              className="mb-4"
-              variants={sectionVariants}
-            >
-              <strong>Taurus Technologies;</strong> Руководитель IT-проектов (апрель 2019 — сентябрь 2019)
-              <br />
-              Управление веб-разработкой, прототипирование, тестирование, контент-менеджмент, анализ потребностей потенциальных заказчиков.
-            </motion.li>
+            {t('experience.list', { returnObjects: true }).map((item, index) => (
+              <motion.li className="mb-4" key={index} variants={sectionVariants}>
+                <strong>{item.company};</strong> {item.position}
+                <br />
+                {item.description}
+              </motion.li>
+            ))}
           </ul>
         </motion.section>
 
@@ -179,27 +121,27 @@ const About = () => {
             <div className="flex items-center border p-4 border-slate-700 w-[200px]">
               <FiCalendar className="text-slate-500 text-xl mr-4" />
               <div>
-                <h3 className="text-sm font-bold">Текущая дата:</h3>
+                <h3 className="text-sm font-bold">{t('currentDate')}:</h3>
                 <p className="text-sm">{currentDate}</p>
               </div>
             </div>
             <div className="flex items-center border p-4 border-slate-700 w-[200px]">
               <FiSun className="text-yellow-500 text-xl mr-4" />
               <div>
-                <h3 className="text-sm font-bold">Погода в Москве:</h3>
+                <h3 className="text-sm font-bold">{t('weatherInMoscow')}:</h3>
                 {weather ? (
                   <p className="text-sm">
-                    {weather.temperature}°C, {weather.weathercode_description || 'ясно'}
+                    {weather.temperature}°C, {weather.weathercode_description || t('clear')}
                   </p>
                 ) : (
-                  <p className="text-sm">Загрузка...</p>
+                  <p className="text-sm">{t('loading')}</p>
                 )}
               </div>
             </div>
             <div className="flex items-center border p-4 border-slate-700 w-[200px]">
               <FiRefreshCw className="text-blue-500 text-xl mr-4" />
               <div>
-                <h3 className="text-sm font-bold">Дата обновления:</h3>
+                <h3 className="text-sm font-bold">{t('lastUpdated')}:</h3>
                 <p className="text-sm">{lastUpdated}</p>
               </div>
             </div>

@@ -40,7 +40,7 @@ const Contacts = () => {
           <FaTelegram /> telegram
         </motion.a>
         <motion.a
-          href="https://www.instagram.com/your-profile"
+          href="https://www.instagram.com/rachmethe"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center text-lg sm:text-xl text-gray-600 hover:text-blue-600 w-full sm:w-auto gap-2"
@@ -50,7 +50,7 @@ const Contacts = () => {
           <FaInstagram /> instagram
         </motion.a>
         <motion.a
-          href="https://hh.ru/resume/your-profile"
+          href="https://hh.ru/resume/94d0bb3eff04f83e250039ed1f547a4b66656a"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center text-lg sm:text-xl text-gray-600 hover:text-blue-600 w-full sm:w-auto gap-2"
@@ -58,16 +58,6 @@ const Contacts = () => {
           transition={{ delay: 1.0 }}
         >
           <FaRegIdBadge /> headhunter
-        </motion.a>
-        <motion.a
-          href="https://www.linkedin.com/in/your-profile"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center text-lg sm:text-xl text-gray-600 hover:text-blue-600 w-full sm:w-auto gap-2"
-          variants={contactVariants}
-          transition={{ delay: 1.1 }}
-        >
-          <FaLinkedin /> linkedin
         </motion.a>
       </motion.div>
     </motion.section>

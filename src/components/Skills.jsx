@@ -1,13 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
-// Список навыков
-const skills = [
-  'CSS3', 'HTML5', 'Vite', 'Tailwind CSS', 'Scrum', 'Team Foundation Server',
-  'Axure RP', 'React', 'JS', 'ReactJS', 'Bootstrap', 'Адаптивная верстка',
-  'Модульное тестирование', 'Регулярные выражения', 'Flex', 'Grid',
-  'Асинхронное программирование', 'jQuery', 'ООП',
-];
+
 
 // Массив для случайного фона
 const colorPalette = [
@@ -27,6 +22,10 @@ const skillVariants = {
 };
 
 const Skills = () => {
+  const { t } = useTranslation();
+
+  // Список навыков
+  const skills = t("skills", { returnObjects: true });
   // Функция для случайного выбора цвета из палитры
   const getRandomColor = () => {
     return colorPalette[Math.floor(Math.random() * colorPalette.length)];
