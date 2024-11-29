@@ -65,7 +65,7 @@ const Projects = () => {
                 autoPlay
                 loop
                 muted
-                className="absolute top-0 left-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                className="absolute bg-slate-700 top-0 left-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
               />
 
               {/* Контент карточки */}
