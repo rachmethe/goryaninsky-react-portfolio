@@ -22,9 +22,9 @@ const Projects = () => {
     {
       title: t('project2Title'),
       description:t('project2Description'),
-      technologies: 'Icecast2, Liquidsoap, React, TailwindCSS, Spline.design',
+      technologies: 'TypeScript, AzuraCast, React, TailwindCSS, Docker, Vite',
       github: 'https://github.com/rachmethe/radio-mascarata',
-      live: 'https://project-two.example.com',
+      live: 'https://mascarata.space',
     },
   ];
 

@@ -11,7 +11,7 @@ const About = () => {
   const { t } = useTranslation();
   const [currentDate, setCurrentDate] = useState('');
   const [weather, setWeather] = useState(null);
-  const [lastUpdated, setLastUpdated] = useState('2024-11-24');
+  const [lastUpdated, setLastUpdated] = useState('2025-01-20');
 
   useEffect(() => {
     const date = new Date();
